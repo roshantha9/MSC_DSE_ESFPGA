@@ -1,0 +1,15 @@
+##############################################################################
+## Filename:          D:\Xtemp\hrm506_EMB\Lab56/drivers/buzzer_v1_00_a/data/buzzer_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Fri Mar 18 16:52:46 2011 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER buzzer
+
+  OPTION supported_peripherals = (buzzer);
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+END DRIVER

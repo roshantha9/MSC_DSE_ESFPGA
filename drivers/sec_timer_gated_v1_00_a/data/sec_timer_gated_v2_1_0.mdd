@@ -1,0 +1,23 @@
+##############################################################################
+## Filename:          D:\Xtemp\hrm506_EMB\Lab56/drivers/sec_timer_gated_v1_00_a/data/sec_timer_gated_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Fri Mar 18 16:29:04 2011 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER sec_timer_gated
+
+  OPTION supported_peripherals = (sec_timer_gated);
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+  BEGIN ARRAY interrupt_handler
+    PROPERTY desc = "Interrupt Handler Information";
+    PROPERTY size = 1, permit = none;
+    PARAM name = int_handler, default = SEC_TIMER_GATED_Intr_DefaultHandler, desc = "Name of Interrupt Handler", type = string;
+    PARAM name = int_port, default = IP2INTC_Irpt, desc = "Interrupt pin associated with the interrupt handler", permit = none;
+
+  END ARRAY
+
+END DRIVER
